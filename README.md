@@ -18,7 +18,7 @@ Registering datasets with Azure offers an advantage of reusability of data in mu
 ![Registered dataset](images/registered-dataset.png)
 
 The autoML run resulted in a list of models from which the *VotingEnsemble* is qualified as the best according to the selected performance metric (as depicted on the right part of the screenshot below). The best model achieved 91.8% accuracy. 
-The *Details* tab of the experiment provides also other pieces of information about the comleted experiment: its status, duration, unique run ID, etc.
+The *Details* tab of the experiment provides also other pieces of information about the completed experiment: its status, duration, unique run ID, etc.
 
 ![Completed experiment and the best model](images/completed_experiment_best_model.png)
 
@@ -40,16 +40,16 @@ Depending on the use of the endpoint, one can be interested in manual and progra
 
 ![Model API responses](images/endpoint_script.png)
 
-Before exposing the endpoint to users it is a good idea to test its performance under load. Load testing the model showed good performance of the endpoint - a mean of 77 ms per request.
+Before exposing the endpoint to users it is a good idea to test its performance under load. Load testing was done with the help of Apache Bench ([benchmark.sh script](benchmark.sh)). The model showed good performance of the endpoint - a mean of 77 ms per request.
 
 ![Apache bench results](images/benchmark_script.png)
 
 ### Automation with a pipeline
 
 Pipelines offer automation of ML processes and enable their reusability even by other users (trigger via a REST endpoint).
-A pipeline in this projec includes consuming the dataset and training the model with AutoML.
+A pipeline in this project includes consuming the dataset and training the model with AutoML.
 
-The pipeline is formulated and triggered from the [Jupyter notebook](aml-pipelines-with-automated-machine-learning-step.ipynb). The details from the runs can be conviniently accessed from the Azure UI. Similar to the *Experiments* section, the *Pipeline runs* on the screenshot below show the status, duration and other details.
+The pipeline is formulated and triggered from the [Jupyter notebook](aml-pipelines-with-automated-machine-learning-step.ipynb). The details from the runs can be conveniently accessed from the Azure UI. Similar to the *Experiments* section, the *Pipeline runs* on the screenshot below show the status, duration and other details.
 
 ![Pipeline list](images/pipelines.png)
 
